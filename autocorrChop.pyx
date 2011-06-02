@@ -10,7 +10,6 @@
 from __future__ import division
 
 # Import necessary python packages:
-import pylab as pl
 import random, uuid
 import numpy as np
 from math import ceil
@@ -54,9 +53,9 @@ def autocorr(
 			float R,			# Chop
 			float T,			# Max Time
 			float dt,			# Time-step
-			float maxS,
-			float maxY,			# max plotting S
-			int plotsOn):		# to plot, or not to plot...
+			float maxS):
+#			float maxY,			# max plotting S
+#			int plotsOn):		# to plot, or not to plot...
 
 	############################################################################
 	# Initializations:
@@ -114,12 +113,12 @@ def autocorr(
 	tEnd = time.mktime(time.localtime())
 	print 'Total Computation Time: ', time.strftime("H:%H M:%M S:%S",time.gmtime(tEnd - tBegin))
 
-	if plotsOn:
-		import pylab as pl
-		pl.plot(lags, autoCorr)
-		pl.xlim([lags.min(0),lags.max(0)])
-		pl.ylim([0,v])
-		pl.show()
+#	if plotsOn:
+#		import pylab as pl
+#		pl.plot(lags, autoCorr)
+#		pl.xlim([lags.min(0),lags.max(0)])
+#		pl.ylim([0,v])
+#		pl.show()
 	
 	return autoCorr, lags
 	
