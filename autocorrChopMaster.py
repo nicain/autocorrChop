@@ -25,7 +25,7 @@ import pbsTools as pt
 ################################################################################
 
 # Settings:
-FFTN = 2**23	#23 max
+FFTN = 2**18	#23 max
 dt = .01		#.001 min
 saveFileName = 'autocorr.dat'
 saveResults = False
